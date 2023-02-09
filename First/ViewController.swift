@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func testButtonAction(_ sender: Any) {
-        let svc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewControllerTest") as? ViewControllerTest
+        let svc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewControllerCoreData") as? ViewControllerCoreData
         navigationController?.pushViewController(svc!, animated: true)
     }
     
