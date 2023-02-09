@@ -372,7 +372,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-y4-IxY">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="628"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="604"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Onx-jZ-1BU" customClass="TableViewCellCoreData" customModule="First" customModuleProvider="target">
@@ -426,16 +426,66 @@
                                             <action selector="loadButton:" destination="FtM-y7-8y5" eventType="touchUpInside" id="KxP-v4-IuQ"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCo-PC-5Op">
+                                        <rect key="frame" x="0.0" y="636" width="100" height="34"/>
+                                        <color key="backgroundColor" name="DColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="4H2-cn-Ol1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-uz-vMO">
+                                        <rect key="frame" x="285" y="636" width="100" height="34"/>
+                                        <color key="backgroundColor" name="DColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="gEx-jK-WfV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-Nh-65L">
+                                        <rect key="frame" x="8" y="694" width="115" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save record"/>
+                                        <connections>
+                                            <action selector="saveRecord:" destination="FtM-y7-8y5" eventType="touchUpInside" id="1f6-2M-YgW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lav-xz-Pkb">
+                                        <rect key="frame" x="311" y="694" width="74" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="FtM-y7-8y5" eventType="touchUpInside" id="F7p-vG-o0X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Xp-QIT">
+                                        <rect key="frame" x="151" y="609" width="92" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DeleteAll"/>
+                                        <connections>
+                                            <action selector="deleteAllButton:" destination="FtM-y7-8y5" eventType="touchUpInside" id="SsM-Kd-NPv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="ZCo-PC-5Op" firstAttribute="top" secondItem="6g3-y4-IxY" secondAttribute="bottom" constant="32" id="B0L-EG-zzX"/>
                                     <constraint firstAttribute="trailing" secondItem="6g3-y4-IxY" secondAttribute="trailing" id="Dve-mW-vl2"/>
-                                    <constraint firstAttribute="bottom" secondItem="D7y-eG-hQ4" secondAttribute="bottom" constant="64" id="Gl3-MS-TZZ"/>
                                     <constraint firstItem="6g3-y4-IxY" firstAttribute="top" secondItem="Byh-pI-lSX" secondAttribute="top" id="IR8-LK-kmF"/>
+                                    <constraint firstItem="HHZ-Xp-QIT" firstAttribute="leading" secondItem="ZCo-PC-5Op" secondAttribute="trailing" constant="51" id="KLZ-bP-cuQ"/>
+                                    <constraint firstItem="Uup-uz-vMO" firstAttribute="top" secondItem="6g3-y4-IxY" secondAttribute="bottom" constant="32" id="LTM-FA-cGb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uup-uz-vMO" secondAttribute="trailing" constant="8" id="Q91-zS-fhb"/>
                                     <constraint firstAttribute="trailing" secondItem="D7y-eG-hQ4" secondAttribute="trailing" constant="64" id="RMw-qA-DLm"/>
+                                    <constraint firstItem="D7y-eG-hQ4" firstAttribute="top" secondItem="HHZ-Xp-QIT" secondAttribute="bottom" constant="16" id="TDk-4R-wIZ"/>
                                     <constraint firstItem="D7y-eG-hQ4" firstAttribute="leading" secondItem="Byh-pI-lSX" secondAttribute="leading" constant="64" id="ZWZ-VD-3CL"/>
                                     <constraint firstItem="6g3-y4-IxY" firstAttribute="leading" secondItem="Byh-pI-lSX" secondAttribute="leading" id="dz9-aW-DmI"/>
-                                    <constraint firstItem="D7y-eG-hQ4" firstAttribute="top" secondItem="6g3-y4-IxY" secondAttribute="bottom" constant="32" id="i6m-2d-DVw"/>
+                                    <constraint firstAttribute="bottom" secondItem="D7y-eG-hQ4" secondAttribute="bottom" constant="64" id="h2h-Lb-Gv5"/>
+                                    <constraint firstItem="ZCo-PC-5Op" firstAttribute="leading" secondItem="Byh-pI-lSX" secondAttribute="leading" id="k1X-UV-rbE"/>
+                                    <constraint firstItem="D7y-eG-hQ4" firstAttribute="top" secondItem="ZCo-PC-5Op" secondAttribute="bottom" constant="-10" id="pCO-ZJ-KSw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -449,7 +499,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="languageTf" destination="Uup-uz-vMO" id="GjM-PI-b09"/>
                         <outlet property="tableView" destination="6g3-y4-IxY" id="Yhr-n1-4pW"/>
+                        <outlet property="titleTf" destination="ZCo-PC-5Op" id="3pi-Gk-efH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LB3-rS-jxC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
