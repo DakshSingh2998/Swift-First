@@ -36,6 +36,12 @@ class ViewControllerCoreData: UIViewController, UITableViewDelegate, UITableView
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(titleTf.text == ""){
+            let svc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewControllerReviews") as! ViewControllerReviews
+            svc.movies = movies[indexPath.row]
+            navigationController?.pushViewController(svc, animated: true)
+            return
+        }
         DatabaseHelper.shared.updateData(object: movies[indexPath.row], title: titleTf.text)
         tableView.reloadData()
     }
